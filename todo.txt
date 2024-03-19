@@ -1,0 +1,6 @@
+data structure, algorithm
+noise, math, abstract math, num, petgraph
+animation, bevy, nannou, wgpu, manim, p5js processing
+REST api, CRUD, HTTP
+physics standard model
+machine learning algorithm, support vector, agent, langchain
