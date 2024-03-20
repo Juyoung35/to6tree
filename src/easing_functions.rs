@@ -42,7 +42,9 @@ ease!(quint,
     },
 );
 ease!(circ,
-    |x| T::from(1).unwrap() - T::sqrt(T::from(1).unwrap()))
+    |x| T::from(1).unwrap() - T::sqrt(T::from(1).unwrap() - x.powi(2u32))),
+    |x| T::sqrt(T::from(1).unwrap() - (x - T::from(1).unwrap()).powi(2u32)),
+    |x| 
 // ease!(circ)
 // ease!(elastic)
 // ease!(quad)
