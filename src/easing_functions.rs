@@ -42,15 +42,30 @@ ease!(quint,
     },
 );
 ease!(circ,
-    |x| T::from(1).unwrap() - T::sqrt(T::from(1).unwrap() - x.powi(2u32))),
+    |x| T::from(1).unwrap() - T::sqrt(T::from(1).unwrap() - x.powi(2u32)),
     |x| T::sqrt(T::from(1).unwrap() - (x - T::from(1).unwrap()).powi(2u32)),
     |x| if x < T::from(0.5).unwrap() {
         (T::from(1).unwrap() - T::sqrt(T::from(1).unwrap() - (T::from(2).unwrap() * x).powi(2u32))) / T::from(2).unwrap()
     } else {
         (T::sqrt(T::from(1).unwrap() - (-T::from(2).unwrap() * x + 2).powi(2u32) + T:: from(1).unwrap())) / T::from(2).unwrap()
     },
-// ease!(circ)
-// ease!(elastic)
+);
+ease!(elastic,
+    |x| if x == T::from(0).unwrap() {
+        T::from(0).unwrap()
+    } else if x == T::from(1).unwrap() {
+        T::from(1).unwrap()
+    } else {
+        -T::from(2).unwrap().powf(T::from(10).unwrap() * x - T::from(10).unwrap()) * T::sin((x * T::from(10).unwrap() - T::from(10.75).unwrap()) * T::from(2).unwrap() * T::PI() / T::from(3).unwrap())
+    },
+    |x| if x == T::from(0).unwrap() {
+        T::from(0).unwrap()
+    } else if x == T::from(1).unwrap() {
+        T::from(1).unwrap()
+    } else {
+        -T::from(2).unwrap().powf(T::from(10).unwrap() * x - T::from(10).unwrap()) * T::sin((x * T::from(10).unwrap() - T::from(10.75).unwrap()) * T::from(2).unwrap() * T::PI() / T::from(3).unwrap())
+    },
+);
 // ease!(quad)
 // ease!(quart)
 // ease!(expo)
