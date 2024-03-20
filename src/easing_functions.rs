@@ -44,7 +44,11 @@ ease!(quint,
 ease!(circ,
     |x| T::from(1).unwrap() - T::sqrt(T::from(1).unwrap() - x.powi(2u32))),
     |x| T::sqrt(T::from(1).unwrap() - (x - T::from(1).unwrap()).powi(2u32)),
-    |x| 
+    |x| if x < T::from(0.5).unwrap() {
+        (T::from(1).unwrap() - T::sqrt(T::from(1).unwrap() - (T::from(2).unwrap() * x).powi(2u32))) / T::from(2).unwrap()
+    } else {
+        (T::sqrt(T::from(1).unwrap() - (-T::from(2).unwrap() * x + 2).powi(2u32) + T:: from(1).unwrap())) / T::from(2).unwrap()
+    },
 // ease!(circ)
 // ease!(elastic)
 // ease!(quad)
