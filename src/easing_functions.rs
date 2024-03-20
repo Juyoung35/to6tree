@@ -19,7 +19,7 @@ macro_rules ease {
     }
 }
 
-ease!(sine)
+ease!(sine, |x| 1 - cos((x * PI) / 2));
 ease!(cubic)
 ease!(quint)
 ease!(circ)
