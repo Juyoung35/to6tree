@@ -1,3 +1,8 @@
+/* REFERENCE 
+    page: https://easings.net/
+    repo: https://github.com/ai/easings.net (GPL-3.0 License)
+*/
+
 macro_rules! ease {
     ($mod_name: ident, $ease_in:expr, $ease_out:expr, $ease_in_out:expr) => {
         pub mod $mod_name {
