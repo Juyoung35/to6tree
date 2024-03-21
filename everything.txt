@@ -4,6 +4,10 @@
   수리논리
   공식
   학자
+  대수적 구조 https://en.wikipedia.org/wiki/Outline_of_algebraic_structures#Types_of_algebraic_structures
+  https://en.wikipedia.org/wiki/Algebraic_structure
+  un_algebra.rs
+  DLMF
 과학
   공식
   기호
