@@ -17,28 +17,6 @@ macro_rules! ease {
         }
     }
 }
-fn if_zero_one_else<T, C>(x, closure: C) -> T
-where
-    T: PartialEq<Float>,
-    C: Fn(T) -> T,
-{
-    if x == 0.0 | x == 1.0 {
-        x
-    } else {
-        closure(x)
-    }
-}
-fn ease_out_bounce<T: Float>(x) -> T {
-    if x < 1.0 / 2.75 {
-        7.5625 * x.powi(2)
-    } else if x < 2.0 / 2.75 {
-        7.5625 * (x - 1.5 / 2.75) * (x - 1.5 / 2.75) + 0.75
-    } else if x < 2.5 / 2.75 {
-        7.5625 * (x - 2.25 / 2.75) * (x - 2.25 / 2.75) + 0.9375
-    } else {
-        7.5625 * (x - 2.625 / 2.75) * (x - 2.625 / 2.75) + 0.984375
-    },
-}
 
 ease!(sine,
     |x| 1.0 - cos(PI * x / 2.0),
@@ -118,6 +96,34 @@ ease!(back,
     } / 2.0,
 );
 ease!(bounce,
-    |x|
-    |x| 
+    |x| 1.0 - ease_out_bounce(1.0 - x),
+    |x| ease_out_bounce(x),
+    |x| if x < 0.5 {
+        (1.0 - ease_out_bounce(1.0 - 2.0 * x))
+    } else {
+        (1.0 + ease_out_bounce(2.0 * x - 1.0))
+    } / 2.0,
 )
+
+fn if_zero_one_else<T, C>(x, closure: C) -> T
+where
+    T: PartialEq<Float>,
+    C: Fn(T) -> T,
+{
+    if x == 0.0 | x == 1.0 {
+        x
+    } else {
+        closure(x)
+    }
+}
+fn ease_out_bounce<T: Float>(x) -> T {
+    if x < 1.0 / 2.75 {
+        7.5625 * x.powi(2)
+    } else if x < 2.0 / 2.75 {
+        7.5625 * (x - 1.5 / 2.75) * (x - 1.5 / 2.75) + 0.75
+    } else if x < 2.5 / 2.75 {
+        7.5625 * (x - 2.25 / 2.75) * (x - 2.25 / 2.75) + 0.9375
+    } else {
+        7.5625 * (x - 2.625 / 2.75) * (x - 2.625 / 2.75) + 0.984375
+    }
+}
