@@ -8,6 +8,12 @@
   https://en.wikipedia.org/wiki/Algebraic_structure
   un_algebra.rs
   DLMF
+  https://en.wikipedia.org/wiki/Category:Algebraic_properties_of_elements
+  https://en.wikipedia.org/wiki/Category:Properties_of_binary_operations
+
+  https://www.semanticscholar.org/paper/Alternativity-and-reciprocity-in-the-Cayley-Dickson-Kuwata-Fujii/9fafa589c7a8c16c8ab0222a00b96ea21aa23539
+  https://www.google.com/search?q=Alternativity+%EB%8C%80%EC%88%98%ED%95%99&sca_esv=1fba1384b54230c4&ei=C-P8ZZSVJKOA1e8PosaUkAs&udm=&ved=0ahUKEwjUxr7734aFAxUjQPUHHSIjBbIQ4dUDCBA&uact=5&oq=Alternativity+%EB%8C%80%EC%88%98%ED%95%99&gs_lp=Egxnd3Mtd2l6LXNlcnAiF0FsdGVybmF0aXZpdHkg64yA7IiY7ZWZMgUQIRigATIFECEYoAEyBRAhGKABSJZQUM4xWLhPcAZ4AJABA5gBoAGgAZkLqgEEMC4xMbgBA8gBAPgBAZgCCqACyQTCAgkQABgHGB4YsAPCAggQABiABBiwA8ICBxAAGB4YsAPCAgsQABgHGB4YsAMYCsICDRAAGAcYHhgPGLADGArCAgcQABiABBgTwgIHEC4YgAQYE8ICBhAAGB4YE8ICCBAAGB4YDxgTwgIHEAAYgAQYDZgDAIgGAZAGCpIHAzYuNKAHvCc&sclient=gws-wiz-serp#imgrc=Angl7YbeXkr-AM&imgdii=OTqeRZ_cIyAagM&ip=1
+  https://en.wikipedia.org/wiki/Algebra_of_communicating_processes
 과학
   공식
   기호

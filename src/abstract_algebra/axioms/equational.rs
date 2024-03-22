@@ -17,3 +17,5 @@ trait RightDistrubutivity<T, O> {
 trait Distrubutivity<T, O>: LeftDistrubutivity<T, O> + RightDistrubutivity<T, O> {
     
 }
+
+// trait AutoDistributivity = Distributivity;
