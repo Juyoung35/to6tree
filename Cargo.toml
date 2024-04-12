@@ -1,0 +1,10 @@
+[package]
+name = "to6tree"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.Rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num-traits = "0.2.18"
+bevy = "0.13.2"
